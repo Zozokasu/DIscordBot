@@ -1,0 +1,14 @@
+version: '3'
+services:
+  discordbot:
+    container_name: 'discordbot'
+    hostname: 'ZozokasuBot'
+
+    build: .
+    restart: always
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - type: bind
+        source: ../workspace
+        target: /workspace
